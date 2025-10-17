@@ -1,0 +1,12 @@
+# Feedback Management Screenshot
+# This file represents the admin feedback management page showing:
+# - Feedback Management title with speech bubble icon
+# - Patient Feedback Records section with 3 metric cards:
+#   - Total Feedback: 1
+#   - Unique Users: 1
+#   - Latest Feedback: Oct 05
+# - Data table with columns:
+#   - ID, User Details, Contact, Feedback Message, Date & Time, Actions
+# - Sample feedback entry: Hirusha Thisayuru (@hirusha1) - "Good"
+# - Export options: Copy, Excel, CSV, PDF
+# - Search functionality and pagination

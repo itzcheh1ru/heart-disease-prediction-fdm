@@ -1,0 +1,12 @@
+# Prediction History Screenshot
+# This file represents the prediction history page showing:
+# - Prediction History title with clock icon
+# - Prediction Records section with:
+#   - Total Predictions counter (7 predictions)
+#   - Export options: Copy, Excel, CSV, PDF
+#   - Filter buttons: All, Healthy, Risk
+#   - Search predictions bar
+# - Prediction Records table with columns:
+#   - ID, Date & Time, % Accuracy, Health Status, Key Metrics
+# - Sample data showing 7 prediction entries with varying accuracy and health status
+# - Pagination controls

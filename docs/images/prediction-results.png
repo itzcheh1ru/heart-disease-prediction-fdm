@@ -1,0 +1,12 @@
+# Prediction Results Screenshot
+# This file represents the AI prediction results page showing:
+# - Heart Disease Prediction Results banner
+# - AI Prediction Result: "You are healthy" with Low Risk status
+# - Model Confidence: 84.0% with progress bar
+# - Health Recommendations with three sections:
+#   - Lifestyle Maintenance (4 bullet points)
+#   - Health Monitoring (4 bullet points) 
+#   - Prevention Focus (4 bullet points)
+# - Download Health Report section with PDF, Text, Dashboard options
+# - Action buttons: New Prediction, Try Again, Back to Home
+# - Important Medical Disclaimer

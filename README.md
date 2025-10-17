@@ -27,7 +27,7 @@ The main dashboard provides a comprehensive overview of the heart health system 
 
 > **Features:** Quick Actions, Health Information, Heart Health Guidelines, and Important Medical Notice
 
-![Heart Health Dashboard](https://via.placeholder.com/800x600/4A90E2/FFFFFF?text=Heart+Health+Dashboard)
+![Heart Health Dashboard](docs/images/home-dashboard.png)
 
 ### 🔐 **User Authentication System**
 Secure and modern authentication system with multiple access levels.
@@ -35,45 +35,45 @@ Secure and modern authentication system with multiple access levels.
 #### **User Login**
 Clean and intuitive login interface with security features.
 
-![User Login](https://via.placeholder.com/800x600/27AE60/FFFFFF?text=User+Login+Page)
+![User Login](docs/images/user-login.png)
 
 #### **User Registration**
 Comprehensive registration form with optional fields for complete profile setup.
 
-![User Registration](https://via.placeholder.com/800x600/3498DB/FFFFFF?text=Create+Account+Form)
+![User Registration](docs/images/user-registration.png)
 
 #### **Admin Login**
 Dedicated admin access with enhanced security measures.
 
-![Admin Login](https://via.placeholder.com/800x600/95A5A6/FFFFFF?text=Admin+Login+Page)
+![Admin Login](docs/images/admin-login.png)
 
 ### 🧪 **Health Assessment Interface**
 Comprehensive 13-parameter health assessment form with real-time validation and helpful tooltips.
 
 > **Sections:** Basic Information, Symptoms & Pain Assessment, Vital Signs, Blood Tests, ECG Results
 
-![Health Assessment Form](https://via.placeholder.com/800x600/9B59B6/FFFFFF?text=Health+Assessment+Form)
+![Health Assessment Form](docs/images/health-assessment.png)
 
 ### 📊 **AI Prediction Results**
 AI-powered results with confidence scores and personalized health recommendations.
 
 > **Features:** Health Status, Confidence Metrics, Personalized Recommendations, Report Downloads
 
-![Prediction Results](https://via.placeholder.com/800x600/E74C3C/FFFFFF?text=Prediction+Results+Page)
+![Prediction Results](docs/images/prediction-results.png)
 
 ### 📈 **Prediction History & Analytics**
 Complete history of health assessments with advanced filtering and export capabilities.
 
 > **Features:** Search & Filter, Export Options (PDF, Excel, CSV), Pagination, Detailed Metrics
 
-![Prediction History](https://via.placeholder.com/800x600/34495E/FFFFFF?text=Prediction+History)
+![Prediction History](docs/images/prediction-history.png)
 
 ### 👤 **User Profile Management**
 Comprehensive profile management with security features and account information.
 
 > **Features:** Personal Information, Account Details, Security Recommendations, Update Controls
 
-![Edit Profile](https://via.placeholder.com/800x600/F39C12/FFFFFF?text=Edit+Profile+Page)
+![Edit Profile](docs/images/edit-profile.png)
 
 ### 💬 **Feedback & Communication System**
 User-friendly feedback submission and comprehensive management system.
@@ -81,19 +81,19 @@ User-friendly feedback submission and comprehensive management system.
 #### **Feedback Center**
 Easy-to-use feedback submission interface for users.
 
-![Feedback Center](https://via.placeholder.com/800x600/16A085/FFFFFF?text=Feedback+Center)
+![Feedback Center](docs/images/feedback-center.png)
 
 #### **Feedback Management**
 Admin interface for reviewing and managing user feedback.
 
-![Feedback Management](https://via.placeholder.com/800x600/8E44AD/FFFFFF?text=Feedback+Management)
+![Feedback Management](docs/images/feedback-management.png)
 
 ### 🛠️ **Admin Dashboard**
 Comprehensive admin panel for system management and monitoring.
 
 > **Features:** System Metrics, User Management, Feedback Review, System Status Monitoring
 
-![Admin Dashboard](https://via.placeholder.com/800x600/2ECC71/FFFFFF?text=Admin+Dashboard)
+![Admin Dashboard](docs/images/admin-dashboard.png)
 
 ---
 

@@ -1,0 +1,10 @@
+# Health Assessment Form Screenshot
+# This file represents the comprehensive health assessment form showing:
+# - Purple banner with Heart Disease Prediction title
+# - 13-parameter health assessment form with sections:
+#   - Basic Information (Age, Gender, BMI, Smoking, Alcohol)
+#   - Symptoms & Pain Assessment (Chest Pain, Exercise Angina)
+#   - Vital Signs (Resting BP, Max Heart Rate)
+#   - Blood Tests (Cholesterol, Fasting Blood Sugar, Major Vessels, Thalassemia)
+#   - ECG Results (ECG Results, ST Depression, ST Slope)
+# - Get AI Prediction button
