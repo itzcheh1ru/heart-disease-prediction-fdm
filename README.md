@@ -18,6 +18,117 @@ The Heart Disease Prediction System is an advanced AI-powered medical diagnosis 
 
 ---
 
+## 📸 **Application Screenshots**
+
+Experience the Heart Disease Prediction System through our comprehensive interface showcase:
+
+### 🏠 **Home Dashboard**
+The main dashboard provides a comprehensive overview of the heart health system with quick access to all features.
+
+> **Features:** Quick Actions, Health Information, Heart Health Guidelines, and Important Medical Notice
+
+![Heart Health Dashboard](https://via.placeholder.com/800x600/4A90E2/FFFFFF?text=Heart+Health+Dashboard)
+
+### 🔐 **User Authentication System**
+Secure and modern authentication system with multiple access levels.
+
+#### **User Login**
+Clean and intuitive login interface with security features.
+
+![User Login](https://via.placeholder.com/800x600/27AE60/FFFFFF?text=User+Login+Page)
+
+#### **User Registration**
+Comprehensive registration form with optional fields for complete profile setup.
+
+![User Registration](https://via.placeholder.com/800x600/3498DB/FFFFFF?text=Create+Account+Form)
+
+#### **Admin Login**
+Dedicated admin access with enhanced security measures.
+
+![Admin Login](https://via.placeholder.com/800x600/95A5A6/FFFFFF?text=Admin+Login+Page)
+
+### 🧪 **Health Assessment Interface**
+Comprehensive 13-parameter health assessment form with real-time validation and helpful tooltips.
+
+> **Sections:** Basic Information, Symptoms & Pain Assessment, Vital Signs, Blood Tests, ECG Results
+
+![Health Assessment Form](https://via.placeholder.com/800x600/9B59B6/FFFFFF?text=Health+Assessment+Form)
+
+### 📊 **AI Prediction Results**
+AI-powered results with confidence scores and personalized health recommendations.
+
+> **Features:** Health Status, Confidence Metrics, Personalized Recommendations, Report Downloads
+
+![Prediction Results](https://via.placeholder.com/800x600/E74C3C/FFFFFF?text=Prediction+Results+Page)
+
+### 📈 **Prediction History & Analytics**
+Complete history of health assessments with advanced filtering and export capabilities.
+
+> **Features:** Search & Filter, Export Options (PDF, Excel, CSV), Pagination, Detailed Metrics
+
+![Prediction History](https://via.placeholder.com/800x600/34495E/FFFFFF?text=Prediction+History)
+
+### 👤 **User Profile Management**
+Comprehensive profile management with security features and account information.
+
+> **Features:** Personal Information, Account Details, Security Recommendations, Update Controls
+
+![Edit Profile](https://via.placeholder.com/800x600/F39C12/FFFFFF?text=Edit+Profile+Page)
+
+### 💬 **Feedback & Communication System**
+User-friendly feedback submission and comprehensive management system.
+
+#### **Feedback Center**
+Easy-to-use feedback submission interface for users.
+
+![Feedback Center](https://via.placeholder.com/800x600/16A085/FFFFFF?text=Feedback+Center)
+
+#### **Feedback Management**
+Admin interface for reviewing and managing user feedback.
+
+![Feedback Management](https://via.placeholder.com/800x600/8E44AD/FFFFFF?text=Feedback+Management)
+
+### 🛠️ **Admin Dashboard**
+Comprehensive admin panel for system management and monitoring.
+
+> **Features:** System Metrics, User Management, Feedback Review, System Status Monitoring
+
+![Admin Dashboard](https://via.placeholder.com/800x600/2ECC71/FFFFFF?text=Admin+Dashboard)
+
+---
+
+## 🚀 **User Journey & Workflow**
+
+### 📋 **Complete User Experience Flow**
+
+```mermaid
+graph TD
+    A[🏠 Home Dashboard] --> B[🔐 User Login/Register]
+    B --> C[🧪 Health Assessment]
+    C --> D[📊 AI Prediction Results]
+    D --> E[📈 View History]
+    E --> F[👤 Profile Management]
+    F --> G[💬 Send Feedback]
+    
+    H[🛠️ Admin Login] --> I[📊 Admin Dashboard]
+    I --> J[👥 User Management]
+    I --> K[💬 Feedback Management]
+    I --> L[📈 System Analytics]
+```
+
+### 🎯 **Key User Interactions**
+
+1. **🏠 Dashboard Access** - Users land on the comprehensive home dashboard
+2. **🔐 Authentication** - Secure login/registration with multiple access levels
+3. **🧪 Health Assessment** - 13-parameter comprehensive health evaluation
+4. **📊 AI Analysis** - Real-time prediction with confidence scores
+5. **📈 History Tracking** - Complete prediction history with analytics
+6. **👤 Profile Management** - Personal information and account settings
+7. **💬 Feedback System** - User feedback collection and management
+8. **🛠️ Admin Control** - Comprehensive system administration
+
+---
+
 ## ✨ **Key Features**
 
 ### 🧠 **AI-Powered Analysis**
