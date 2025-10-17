@@ -18,6 +18,10 @@ The Heart Disease Prediction System is an advanced AI-powered medical diagnosis 
 
 ---
 
+## 📸 Screenshots
+
+A full gallery of UI screenshots is available here: [docs/SCREENSHOTS.md](docs/SCREENSHOTS.md)
+
 ## 📸 **Application Screenshots**
 
 Experience the Heart Disease Prediction System through our comprehensive interface showcase:
