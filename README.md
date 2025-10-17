@@ -28,7 +28,7 @@ The main dashboard provides a comprehensive overview of the heart health system 
 > **Features:** Quick Actions, Health Information, Heart Health Guidelines, and Important Medical Notice
 
 <p align="center">
-  <img src="docs/screenshots/home-dashboard.png" alt="Home Dashboard" width="10000" />
+  <img src="docs/screenshots/home-dashboard.png" alt="Home Dashboard" width="1500" />
 </p>
 
 ### 🔐 **User Authentication System**
