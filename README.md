@@ -38,7 +38,7 @@ Secure and modern authentication system with multiple access levels.
 Clean and intuitive login interface with security features.
 
 <p align="center">
-  <img src="docs/screenshots/auth-user-login.png" alt="User Login" width="900" />
+  <img src="docs/screenshots/auth-user-login.png" alt="User Login" width="1500" />
 </p>
 
 #### **User Registration**
