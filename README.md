@@ -27,7 +27,7 @@ The main dashboard provides a comprehensive overview of the heart health system 
 
 > **Features:** Quick Actions, Health Information, Heart Health Guidelines, and Important Medical Notice
 
-![Heart Health Dashboard](docs/images/home-dashboard.png)
+![Heart Health Dashboard](https://github.com/sandalisamarasinghe/heart-disease-prediction-fdm/blob/docs/images/home-dashboard.png)
 
 ### 🔐 **User Authentication System**
 Secure and modern authentication system with multiple access levels.
