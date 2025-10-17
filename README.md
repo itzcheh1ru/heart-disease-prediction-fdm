@@ -27,7 +27,9 @@ The main dashboard provides a comprehensive overview of the heart health system 
 
 > **Features:** Quick Actions, Health Information, Heart Health Guidelines, and Important Medical Notice
 
-![Heart Health Dashboard](https://img.shields.io/badge/Home%20Dashboard-Heart%20Health%20Management-blue?style=for-the-badge&logo=heart)
+<p align="center">
+  <img src="docs/screenshots/home-dashboard.png" alt="Home Dashboard" width="900" />
+</p>
 
 ### 🔐 **User Authentication System**
 Secure and modern authentication system with multiple access levels.
@@ -35,45 +37,59 @@ Secure and modern authentication system with multiple access levels.
 #### **User Login**
 Clean and intuitive login interface with security features.
 
-![User Login](https://img.shields.io/badge/User%20Login-Secure%20Authentication-green?style=for-the-badge&logo=sign-in-alt)
+<p align="center">
+  <img src="docs/screenshots/auth-user-login.png" alt="User Login" width="900" />
+</p>
 
 #### **User Registration**
 Comprehensive registration form with optional fields for complete profile setup.
 
-![User Registration](https://img.shields.io/badge/User%20Registration-Create%20Account-blue?style=for-the-badge&logo=user-plus)
+<p align="center">
+  <img src="docs/screenshots/auth-user-registration.png" alt="User Registration" width="900" />
+</p>
 
 #### **Admin Login**
 Dedicated admin access with enhanced security measures.
 
-![Admin Login](https://img.shields.io/badge/Admin%20Login-System%20Access-red?style=for-the-badge&logo=shield-alt)
+<p align="center">
+  <img src="docs/screenshots/auth-admin-login.png" alt="Admin Login" width="900" />
+</p>
 
 ### 🧪 **Health Assessment Interface**
 Comprehensive 13-parameter health assessment form with real-time validation and helpful tooltips.
 
 > **Sections:** Basic Information, Symptoms & Pain Assessment, Vital Signs, Blood Tests, ECG Results
 
-![Health Assessment Form](https://img.shields.io/badge/Health%20Assessment-13%20Parameters-purple?style=for-the-badge&logo=stethoscope)
+<p align="center">
+  <img src="docs/screenshots/assessment-form.png" alt="Health Assessment Form" width="900" />
+</p>
 
 ### 📊 **AI Prediction Results**
 AI-powered results with confidence scores and personalized health recommendations.
 
 > **Features:** Health Status, Confidence Metrics, Personalized Recommendations, Report Downloads
 
-![Prediction Results](https://img.shields.io/badge/AI%20Prediction-Results%20%26%20Recommendations-orange?style=for-the-badge&logo=brain)
+<p align="center">
+  <img src="docs/screenshots/prediction-results.png" alt="Prediction Results" width="900" />
+</p>
 
 ### 📈 **Prediction History & Analytics**
 Complete history of health assessments with advanced filtering and export capabilities.
 
 > **Features:** Search & Filter, Export Options (PDF, Excel, CSV), Pagination, Detailed Metrics
 
-![Prediction History](https://img.shields.io/badge/Prediction%20History-Analytics%20%26%20Tracking-darkblue?style=for-the-badge&logo=chart-line)
+<p align="center">
+  <img src="docs/screenshots/prediction-history.png" alt="Prediction History" width="900" />
+</p>
 
 ### 👤 **User Profile Management**
 Comprehensive profile management with security features and account information.
 
 > **Features:** Personal Information, Account Details, Security Recommendations, Update Controls
 
-![Edit Profile](https://img.shields.io/badge/Profile%20Management-User%20Settings-yellow?style=for-the-badge&logo=user-edit)
+<p align="center">
+  <img src="docs/screenshots/profile-settings.png" alt="Profile Settings" width="900" />
+</p>
 
 ### 💬 **Feedback & Communication System**
 User-friendly feedback submission and comprehensive management system.
@@ -81,19 +97,25 @@ User-friendly feedback submission and comprehensive management system.
 #### **Feedback Center**
 Easy-to-use feedback submission interface for users.
 
-![Feedback Center](https://img.shields.io/badge/Feedback%20Center-User%20Input-teal?style=for-the-badge&logo=comments)
+<p align="center">
+  <img src="docs/screenshots/feedback-center.png" alt="Feedback Center" width="900" />
+</p>
 
 #### **Feedback Management**
 Admin interface for reviewing and managing user feedback.
 
-![Feedback Management](https://img.shields.io/badge/Feedback%20Management-Admin%20Review-purple?style=for-the-badge&logo=clipboard-list)
+<p align="center">
+  <img src="docs/screenshots/feedback-management.png" alt="Feedback Management" width="900" />
+</p>
 
 ### 🛠️ **Admin Dashboard**
 Comprehensive admin panel for system management and monitoring.
 
 > **Features:** System Metrics, User Management, Feedback Review, System Status Monitoring
 
-![Admin Dashboard](https://img.shields.io/badge/Admin%20Dashboard-System%20Management-green?style=for-the-badge&logo=cogs)
+<p align="center">
+  <img src="docs/screenshots/admin-dashboard.png" alt="Admin Dashboard" width="900" />
+</p>
 
 ---
 
