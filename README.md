@@ -511,7 +511,7 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 ### 🌟 **Star this repository if you found it helpful!**
 
-[![GitHub stars](https://img.shields.io/github/stars/sandalisamarasinghe/heart-disease-prediction-fdm?style=social)](https://github.com/your-username/heart-disease-prediction-fdm)
+[![GitHub stars](https://img.shields.io/github/stars/sandalisamarasinghe/heart-disease-prediction-fdm?style=social)](https://github.com/sandalisamarasinghe/heart-disease-prediction-fdm)
 [![GitHub forks](https://img.shields.io/github/forks/sandalisamarasinghe/heart-disease-prediction-fdm?style=social)](https://github.com/your-username/heart-disease-prediction-fdm)
 
 **Made with ❤️ by the Heart Disease Prediction Team**
