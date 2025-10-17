@@ -1,0 +1,301 @@
+{% extends 'index.html' %}
+{% load static %}
+
+{% block title %}Prediction History - Heart Disease Prediction{% endblock %}
+
+{% block body %}
+<div class="container mt-4">
+    <div class="row justify-content-center">
+        <div class="col-lg-10">
+            <div class="dashboard-header text-center mb-4">
+                <div class="header-icon mb-3">
+                    <i class="fas fa-history"></i>
+                </div>
+                <h1 class="dashboard-title">Prediction History</h1>
+                <p class="dashboard-subtitle">Review recorded predictions. Use filters and search to find entries quickly.</p>
+            </div>
+
+            <div class="dashboard-card">
+    
+    <!-- Prediction Records Section -->
+    <div class="section-header">
+        <h2 class="section-title">
+            <i class="fas fa-database"></i>
+                            Prediction Records
+                        </h2>
+        <p class="section-description">Overview of heart health predictions logged by the system</p>
+                </div>
+
+        <div class="p-3 p-md-4">
+            <!-- Statistics Cards -->
+            <div class="row mb-4">
+                <div class="col-md-3 mb-3">
+                    <div class="stat-card">
+                            <div class="stat-icon">
+                                <i class="fas fa-chart-line"></i>
+                            </div>
+                            <div class="stat-content">
+                                <h3 class="stat-number">{{ data|length }}</h3>
+                                <p class="stat-label">Total Predictions</p>
+                        </div>
+                    </div>
+                                </div>
+                            </div>
+
+            <!-- Data Table -->
+            <div class="table-responsive">
+                <div class="d-flex justify-content-between align-items-center mb-3 flex-wrap gap-2">
+                    <div class="btn-group" role="group">
+                        <button type="button" class="btn btn-outline-secondary btn-sm" onclick="exportData('copy')">
+                            <i class="fas fa-copy"></i> Copy
+                        </button>
+                        <button type="button" class="btn btn-outline-success btn-sm" onclick="exportData('excel')">
+                            <i class="fas fa-file-excel"></i> Excel
+                        </button>
+                        <button type="button" class="btn btn-outline-info btn-sm" onclick="exportData('csv')">
+                            <i class="fas fa-file-csv"></i> CSV
+                        </button>
+                        <button type="button" class="btn btn-outline-danger btn-sm" onclick="exportData('pdf')">
+                            <i class="fas fa-file-pdf"></i> PDF
+                        </button>
+                    </div>
+                    <div class="btn-group" role="group" aria-label="Filter by status">
+                        <button type="button" class="btn btn-outline-primary btn-sm active" id="filterAll">All</button>
+                        <button type="button" class="btn btn-outline-success btn-sm" id="filterHealthy">Healthy</button>
+                        <button type="button" class="btn btn-outline-danger btn-sm" id="filterRisk">Risk</button>
+                    </div>
+                    <div class="search-box">
+                        <input type="text" class="form-control" placeholder="Search predictions..." id="searchInput" aria-label="Search predictions">
+                    </div>
+                </div>
+
+                <table class="table table-hover" id="predictionTable">
+                    <thead class="table-dark">
+                            <tr>
+                                <th class="text-center">
+                                <i class="fas fa-hashtag me-1"></i>
+                                # ID
+                                <i class="fas fa-sort ms-1"></i>
+                                </th>
+                                <th>
+                                <i class="fas fa-calendar me-1"></i>
+                                DATE & TIME
+                                <i class="fas fa-sort ms-1"></i>
+                                </th>
+                                <th class="text-center">
+                                <i class="fas fa-percentage me-1"></i>
+                                % ACCURACY
+                                <i class="fas fa-sort ms-1"></i>
+                                </th>
+                                <th class="text-center">
+                                <i class="fas fa-heartbeat me-1"></i>
+                                HEALTH STATUS
+                                <i class="fas fa-sort ms-1"></i>
+                                </th>
+                                <th>
+                                <i class="fas fa-chart-bar me-1"></i>
+                                KEY METRICS
+                                <i class="fas fa-sort ms-1"></i>
+                                </th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            {% for i in data %}
+                        <tr class="fade-in" data-status="{% if i.result == "0" %}healthy{% else %}risk{% endif %}">
+                                <td class="text-center">
+                                    <span class="badge bg-primary rounded-pill">{{ i.id }}</span>
+                                </td>
+                                <td>
+                                    <div class="d-flex align-items-center">
+                                        <i class="fas fa-calendar-alt text-primary me-2"></i>
+                                        <div>
+                                            <div class="fw-bold">{{ i.created|date:"M d, Y" }}</div>
+                                            <small class="text-muted">{{ i.created|date:"g:i A" }}</small>
+                                        </div>
+                                    </div>
+                                </td>
+                                <td class="text-center">
+                                    <div class="d-flex align-items-center justify-content-center">
+                                        <div class="progress me-2" style="width: 60px; height: 8px;">
+                                            <div class="progress-bar {% if i.prediction_accuracy >= 90 %}bg-success{% elif i.prediction_accuracy >= 70 %}bg-warning{% else %}bg-danger{% endif %}" 
+                                                 role="progressbar" 
+                                             data-accuracy="{{ i.prediction_accuracy }}"
+                                                 aria-valuenow="{{ i.prediction_accuracy }}" 
+                                                 aria-valuemin="0" aria-valuemax="100">
+                                            </div>
+                                        </div>
+                                        <span class="text-dark fw-bold">{{ i.prediction_accuracy }}%</span>
+                                    </div>
+                                </td>
+                                <td class="text-center">
+                                    {% if i.result == "0" %}
+                                    <span class="badge bg-success rounded-pill">
+                                        <i class="fas fa-check-circle me-1"></i> Healthy
+                                    </span>
+                                    {% else %}
+                                    <span class="badge bg-danger rounded-pill">
+                                        <i class="fas fa-exclamation-triangle me-1"></i> ▲ Risk Detected
+                                    </span>
+                                    {% endif %}
+                                </td>
+                                <td>
+                                    <div class="d-flex align-items-center">
+                                        <i class="fas fa-chart-bar text-warning me-2"></i>
+                                        <span class="text-truncate" style="max-width: 150px;" title="{{ i.values_list }}">
+                                        {{ i.values_list }}
+                                        </span>
+                                    </div>
+                                </td>
+                            </tr>
+                            {% empty %}
+                            <tr>
+                            <td colspan="5" class="text-center py-4">
+                                    <div class="empty-state">
+                                    <i class="fas fa-chart-line fa-3x text-muted mb-3"></i>
+                                    <h5 class="text-muted">No prediction records found</h5>
+                                    <p class="text-muted">Start making predictions to see your history here.</p>
+                                    <a href="{% url 'prediction_form' %}" class="btn btn-primary">
+                                        <i class="fas fa-plus"></i> Make First Prediction
+                                        </a>
+                                    </div>
+                                </td>
+                            </tr>
+                            {% endfor %}
+                        </tbody>
+                    </table>
+                </div>
+
+            <!-- Pagination -->
+            <div class="d-flex justify-content-between align-items-center mt-3">
+                <div class="text-muted">
+                    Showing 1 to {{ data|length }} of {{ data|length }} entries
+                </div>
+                <nav aria-label="Page navigation">
+                    <ul class="pagination pagination-sm">
+                        <li class="page-item disabled">
+                            <span class="page-link">Previous</span>
+                        </li>
+                        <li class="page-item active">
+                            <span class="page-link">1</span>
+                        </li>
+                        <li class="page-item disabled">
+                            <span class="page-link">Next</span>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Styles aligned with user_home dashboard visuals -->
+<style>
+.dashboard-header { margin-bottom: 2rem; }
+.header-icon { width: 80px; height: 80px; margin: 0 auto; display: flex; align-items: center; justify-content: center; background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); border-radius: 50%; box-shadow: 0 8px 32px rgba(102, 126, 234, 0.3); }
+.header-icon i { font-size: 2.2rem; color: white; }
+.dashboard-title { font-size: 2rem; font-weight: 700; color: #2c3e50; margin: 1rem 0 0.5rem; }
+.dashboard-subtitle { font-size: 1rem; color: #7f8c8d; }
+
+.dashboard-card { background: white; border-radius: 20px; box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1); overflow: hidden; border: 1px solid #e9ecef; animation: fadeInUp 0.6s ease-out; }
+
+.section-header { padding: 1.5rem 1.5rem 1rem 1.5rem; border-bottom: 1px solid #f1f3f4; }
+.section-title { font-size: 1.25rem; font-weight: 600; color: #2c3e50; display: flex; align-items: center; gap: 0.5rem; }
+.section-title i { color: #667eea; }
+.section-description { color: #7f8c8d; margin: 0; font-size: 0.95rem; }
+
+.stat-card { background: #f8f9fa; border-radius: 12px; padding: 1rem; border-left: 4px solid #667eea; transition: transform 0.2s ease; }
+.stat-card:hover { transform: translateY(-3px); }
+.stat-icon { font-size: 1.5rem; color: #667eea; margin-bottom: 0.5rem; }
+.stat-number { font-size: 1.5rem; font-weight: 700; color: #2c3e50; margin: 0; }
+.stat-label { color: #7f8c8d; margin: 0; font-size: 0.85rem; }
+
+.table th { background-color: #343a40; color: white; border: none; font-weight: 600; }
+.table td { vertical-align: middle; border-color: #e9ecef; }
+.badge { font-size: 0.8rem; }
+.progress { background-color: #e9ecef; }
+.text-truncate { max-width: 150px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+
+.fade-in { animation: fadeIn 0.5s ease-in; }
+@keyframes fadeIn { from { opacity: 0; transform: translateY(20px); } to { opacity: 1; transform: translateY(0); } }
+@keyframes fadeInUp { from { opacity: 0; transform: translateY(30px); } to { opacity: 1; transform: translateY(0); } }
+
+.empty-state { padding: 3rem; }
+.search-box { max-width: 300px; }
+.btn-group .btn { margin-right: 0.25rem; }
+
+@media (max-width: 768px) { .section-header { padding: 1rem; } }
+</style>
+
+<!-- JavaScript for Table Functionality -->
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    // Search functionality
+    const searchInput = document.getElementById('searchInput');
+    const table = document.getElementById('predictionTable');
+    const rows = table.getElementsByTagName('tr');
+
+    searchInput.addEventListener('keyup', function() {
+        const searchTerm = this.value.toLowerCase();
+        
+        for (let i = 1; i < rows.length; i++) {
+            const row = rows[i];
+            const text = row.textContent.toLowerCase();
+            
+            if (text.includes(searchTerm)) {
+                row.style.display = '';
+            } else {
+                row.style.display = 'none';
+            }
+        }
+    });
+
+    // Status filter functionality
+    const filterButtons = {
+        all: document.getElementById('filterAll'),
+        healthy: document.getElementById('filterHealthy'),
+        risk: document.getElementById('filterRisk')
+    };
+
+    function applyFilters(active) {
+        Object.values(filterButtons).forEach(btn => btn.classList.remove('active'));
+        filterButtons[active].classList.add('active');
+
+        const term = searchInput.value.toLowerCase();
+        for (let i = 1; i < rows.length; i++) {
+            const row = rows[i];
+            const rowText = row.textContent.toLowerCase();
+            const status = row.getAttribute('data-status');
+
+            const statusMatch = active === 'all' || status === active;
+            const textMatch = rowText.includes(term);
+            row.style.display = statusMatch && textMatch ? '' : 'none';
+        }
+    }
+
+    if (filterButtons.all && filterButtons.healthy && filterButtons.risk) {
+        filterButtons.all.addEventListener('click', () => applyFilters('all'));
+        filterButtons.healthy.addEventListener('click', () => applyFilters('healthy'));
+        filterButtons.risk.addEventListener('click', () => applyFilters('risk'));
+        applyFilters('all');
+    }
+
+    // Export functionality
+    window.exportData = function(format) {
+        alert(`Exporting data as ${format.toUpperCase()}...`);
+        // Add actual export functionality here
+    };
+
+    // Initialize progress bar widths from data-accuracy
+    const bars = document.querySelectorAll('#predictionTable .progress-bar');
+    bars.forEach(function(bar) {
+        const val = parseFloat(bar.getAttribute('data-accuracy')) || 0;
+        bar.style.width = `${Math.max(0, Math.min(100, val))}%`;
+    });
+});
+</script>
+{% endblock %}
+
+
